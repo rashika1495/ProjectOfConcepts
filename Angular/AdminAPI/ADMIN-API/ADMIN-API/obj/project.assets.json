@@ -11506,11 +11506,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Angular\\AdminAPI\\ADMIN-API\\ADMIN-API\\ADMINAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Rashika Sharma\\Documents\\GitHub\\ProjectOfConcepts\\Angular\\AdminAPI\\ADMIN-API\\ADMIN-API\\ADMINAPI.csproj",
       "projectName": "ADMINAPI",
-      "projectPath": "H:\\Angular\\AdminAPI\\ADMIN-API\\ADMIN-API\\ADMINAPI.csproj",
+      "projectPath": "C:\\Users\\Rashika Sharma\\Documents\\GitHub\\ProjectOfConcepts\\Angular\\AdminAPI\\ADMIN-API\\ADMIN-API\\ADMINAPI.csproj",
       "packagesPath": "C:\\Users\\Rashika Sharma\\.nuget\\packages\\",
-      "outputPath": "H:\\Angular\\AdminAPI\\ADMIN-API\\ADMIN-API\\obj\\",
+      "outputPath": "C:\\Users\\Rashika Sharma\\Documents\\GitHub\\ProjectOfConcepts\\Angular\\AdminAPI\\ADMIN-API\\ADMIN-API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
