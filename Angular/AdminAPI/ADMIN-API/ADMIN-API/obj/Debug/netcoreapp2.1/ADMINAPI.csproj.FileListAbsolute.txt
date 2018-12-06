@@ -1,0 +1,13 @@
+H:\Angular\AdminAPI\ADMIN-API\ADMIN-API\obj\Debug\netcoreapp2.1\ADMINAPI.csproj.CoreCompileInputs.cache
+H:\Angular\AdminAPI\ADMIN-API\ADMIN-API\obj\Debug\netcoreapp2.1\ADMINAPI.RazorAssemblyInfo.cache
+H:\Angular\AdminAPI\ADMIN-API\ADMIN-API\obj\Debug\netcoreapp2.1\ADMINAPI.RazorAssemblyInfo.cs
+H:\Angular\AdminAPI\ADMIN-API\ADMIN-API\obj\Debug\netcoreapp2.1\ADMINAPI.AssemblyInfoInputs.cache
+H:\Angular\AdminAPI\ADMIN-API\ADMIN-API\obj\Debug\netcoreapp2.1\ADMINAPI.AssemblyInfo.cs
+H:\Angular\AdminAPI\ADMIN-API\ADMIN-API\bin\Debug\netcoreapp2.1\ADMINAPI.deps.json
+H:\Angular\AdminAPI\ADMIN-API\ADMIN-API\bin\Debug\netcoreapp2.1\ADMINAPI.runtimeconfig.json
+H:\Angular\AdminAPI\ADMIN-API\ADMIN-API\bin\Debug\netcoreapp2.1\ADMINAPI.runtimeconfig.dev.json
+H:\Angular\AdminAPI\ADMIN-API\ADMIN-API\bin\Debug\netcoreapp2.1\ADMINAPI.dll
+H:\Angular\AdminAPI\ADMIN-API\ADMIN-API\bin\Debug\netcoreapp2.1\ADMINAPI.pdb
+H:\Angular\AdminAPI\ADMIN-API\ADMIN-API\obj\Debug\netcoreapp2.1\ADMINAPI.RazorTargetAssemblyInfo.cache
+H:\Angular\AdminAPI\ADMIN-API\ADMIN-API\obj\Debug\netcoreapp2.1\ADMINAPI.dll
+H:\Angular\AdminAPI\ADMIN-API\ADMIN-API\obj\Debug\netcoreapp2.1\ADMINAPI.pdb
