@@ -25,3 +25,6 @@ C:\Users\Rashika Sharma\Documents\GitHub\ProjectOfConcepts\Angular\AdminAPI\ADMI
 C:\Users\Rashika Sharma\Documents\GitHub\ProjectOfConcepts\Angular\AdminAPI\ADMIN-API\ADMIN-API\obj\Debug\netcoreapp2.1\ADMINAPI.RazorTargetAssemblyInfo.cache
 C:\Users\Rashika Sharma\Documents\GitHub\ProjectOfConcepts\Angular\AdminAPI\ADMIN-API\ADMIN-API\obj\Debug\netcoreapp2.1\ADMINAPI.dll
 C:\Users\Rashika Sharma\Documents\GitHub\ProjectOfConcepts\Angular\AdminAPI\ADMIN-API\ADMIN-API\obj\Debug\netcoreapp2.1\ADMINAPI.pdb
+C:\Users\Rashika Sharma\Documents\GitHub\ProjectOfConcepts\Angular\AdminAPI\ADMIN-API\ADMIN-API\bin\Debug\netcoreapp2.1\ADMINAPI.DTO.dll
+C:\Users\Rashika Sharma\Documents\GitHub\ProjectOfConcepts\Angular\AdminAPI\ADMIN-API\ADMIN-API\bin\Debug\netcoreapp2.1\ADMINAPI.DTO.pdb
+C:\Users\Rashika Sharma\Documents\GitHub\ProjectOfConcepts\Angular\AdminAPI\ADMIN-API\ADMIN-API\obj\Debug\netcoreapp2.1\ADMINAPI.csproj.CopyComplete

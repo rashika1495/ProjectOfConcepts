@@ -1,0 +1,9 @@
+C:\Users\Rashika Sharma\Documents\GitHub\ProjectOfConcepts\Angular\AdminAPI\ADMIN-API\ADMINAPI.DTO\bin\Debug\netcoreapp2.1\ADMINAPI.DTO.deps.json
+C:\Users\Rashika Sharma\Documents\GitHub\ProjectOfConcepts\Angular\AdminAPI\ADMIN-API\ADMINAPI.DTO\bin\Debug\netcoreapp2.1\ADMINAPI.DTO.dll
+C:\Users\Rashika Sharma\Documents\GitHub\ProjectOfConcepts\Angular\AdminAPI\ADMIN-API\ADMINAPI.DTO\bin\Debug\netcoreapp2.1\ADMINAPI.DTO.pdb
+C:\Users\Rashika Sharma\Documents\GitHub\ProjectOfConcepts\Angular\AdminAPI\ADMIN-API\ADMINAPI.DTO\obj\Debug\netcoreapp2.1\ADMINAPI.DTO.csproj.CoreCompileInputs.cache
+C:\Users\Rashika Sharma\Documents\GitHub\ProjectOfConcepts\Angular\AdminAPI\ADMIN-API\ADMINAPI.DTO\obj\Debug\netcoreapp2.1\ADMINAPI.DTO.AssemblyInfoInputs.cache
+C:\Users\Rashika Sharma\Documents\GitHub\ProjectOfConcepts\Angular\AdminAPI\ADMIN-API\ADMINAPI.DTO\obj\Debug\netcoreapp2.1\ADMINAPI.DTO.AssemblyInfo.cs
+C:\Users\Rashika Sharma\Documents\GitHub\ProjectOfConcepts\Angular\AdminAPI\ADMIN-API\ADMINAPI.DTO\obj\Debug\netcoreapp2.1\ADMINAPI.DTO.dll
+C:\Users\Rashika Sharma\Documents\GitHub\ProjectOfConcepts\Angular\AdminAPI\ADMIN-API\ADMINAPI.DTO\obj\Debug\netcoreapp2.1\ADMINAPI.DTO.pdb
+C:\Users\Rashika Sharma\Documents\GitHub\ProjectOfConcepts\Angular\AdminAPI\ADMIN-API\ADMINAPI.DTO\obj\Debug\netcoreapp2.1\ADMINAPI.DTO.csprojAssemblyReference.cache
