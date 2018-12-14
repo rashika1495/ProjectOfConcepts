@@ -8,6 +8,8 @@ import { EditComponent } from './edit/edit.component';
 import { ListUserComponent } from './list-user/list-user.component';
 import { RouterModule, Routes } from '@angular/router';
 import { routes } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { routes } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    routes
+    routes,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
