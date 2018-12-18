@@ -38,6 +38,9 @@ namespace API.Controllers
         {
             try
             {
+                if(string.IsNullOrEmpty(dto.Email) || string.IsNullOrEmpty(dto.FirstName) || string.IsNullOrEmpty(dto.LastName) ||
+                    string.IsNullOrEmpty(dto.Password))
+                    return APIResponseCreator.GetResponse(ResponseCode.Error_code, "Please provide all mandatory details.",null, System.Net.HttpStatusCode.OK);
                 var user = new IdentityUser
                 {
                     Email = dto.Email,
@@ -61,8 +64,9 @@ namespace API.Controllers
                     };
                     context.User.Add(user1);
                     context.SaveChanges();
+                    return APIResponseCreator.GetResponse(ResponseCode.SUCCESS_CODE, "Success", dto, System.Net.HttpStatusCode.OK);
                 }
-                return APIResponseCreator.GetResponse(ResponseCode.SUCCESS_CODE, "Success.", null, System.Net.HttpStatusCode.OK);
+                return APIResponseCreator.GetResponse(ResponseCode.SUCCESS_CODE, result.Errors.FirstOrDefault().Description.ToString(), dto, System.Net.HttpStatusCode.OK);
             }
             catch (Exception ex)
             {
@@ -75,10 +79,13 @@ namespace API.Controllers
         {
             try
             {
+                if(string.IsNullOrEmpty(dto.Email) || string.IsNullOrEmpty(dto.Password))
+                    return APIResponseCreator.GetResponse(ResponseCode.FAILED_CODE, "Please provide username and password.", dto.Email, System.Net.HttpStatusCode.OK);
+
                 var result = await _signInManager.PasswordSignInAsync(dto.Email, dto.Password, dto.RememberMe, lockoutOnFailure: true);
                 if (result.Succeeded)
                 {
-                    return APIResponseCreator.GetResponse(ResponseCode.SUCCESS_CODE, "Success.", null, System.Net.HttpStatusCode.OK);
+                    return APIResponseCreator.GetResponse(ResponseCode.SUCCESS_CODE, "Success", null, System.Net.HttpStatusCode.OK);
                 }
                 return APIResponseCreator.GetResponse(ResponseCode.FAILED_CODE, result.ToString(), dto.Email, System.Net.HttpStatusCode.OK);
             }
