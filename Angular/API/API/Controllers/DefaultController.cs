@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using ADMINAPI.DTO;
 using ADMINAPI.Helpers;
 using API.Models;
+using API.Models.Stored_Procedures;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -38,9 +39,9 @@ namespace API.Controllers
         {
             try
             {
-                if(string.IsNullOrEmpty(dto.Email) || string.IsNullOrEmpty(dto.FirstName) || string.IsNullOrEmpty(dto.LastName) ||
+                if (string.IsNullOrEmpty(dto.Email) || string.IsNullOrEmpty(dto.FirstName) || string.IsNullOrEmpty(dto.LastName) ||
                     string.IsNullOrEmpty(dto.Password))
-                    return APIResponseCreator.GetResponse(ResponseCode.Error_code, "Please provide all mandatory details.",null, System.Net.HttpStatusCode.OK);
+                    return APIResponseCreator.GetResponse(ResponseCode.Error_code, "Please provide all mandatory details.", null, System.Net.HttpStatusCode.OK);
                 var user = new IdentityUser
                 {
                     Email = dto.Email,
@@ -51,7 +52,7 @@ namespace API.Controllers
                 var result = await _userManager.CreateAsync(user, dto.Password);
                 if (result.Succeeded)
                 {
-                    var context = new RashikaContext();
+                    var context = new AngularDbContext();
                     var user1 = new User
                     {
                         FirstName = dto.FirstName,
@@ -60,7 +61,7 @@ namespace API.Controllers
                         ContactNumber = dto.ContactNumber,
                         Password = dto.Password,
                         IsActive = true,
-                        AspnetUserId=user.Id
+                        AspnetUserId = user.Id
                     };
                     context.User.Add(user1);
                     context.SaveChanges();
@@ -79,7 +80,7 @@ namespace API.Controllers
         {
             try
             {
-                if(string.IsNullOrEmpty(dto.Email) || string.IsNullOrEmpty(dto.Password))
+                if (string.IsNullOrEmpty(dto.Email) || string.IsNullOrEmpty(dto.Password))
                     return APIResponseCreator.GetResponse(ResponseCode.FAILED_CODE, "Please provide username and password.", dto.Email, System.Net.HttpStatusCode.OK);
 
                 var result = await _signInManager.PasswordSignInAsync(dto.Email, dto.Password, dto.RememberMe, lockoutOnFailure: true);
@@ -94,6 +95,42 @@ namespace API.Controllers
                 return APIResponseCreator.GetResponse(ResponseCode.FAILED_CODE, ex.ToString(), null, System.Net.HttpStatusCode.OK);
             }
         }
-        
+        [HttpGet]
+        [Route("GetAllUsers")]
+        public IActionResult GetAllUsers()
+        {
+            try
+            {
+                var context = new AngularDbContext();
+                var result = (from u in context.User select u).ToList();
+                return APIResponseCreator.GetResponse(ResponseCode.SUCCESS_CODE, "Success", result, System.Net.HttpStatusCode.OK);
+            }
+            catch (Exception ex)
+            {
+                return APIResponseCreator.GetResponse(ResponseCode.FAILED_CODE, ex.ToString(), null, System.Net.HttpStatusCode.OK);
+            }
+        }
+        [HttpPost]
+        [Route("GetAllUsersWithSearch")]
+        public async Task<IActionResult> GetAllUsersWithSearch(UserSearchFilterDTO dto)
+        {
+            try
+            {
+                var sp = new SpGetUsersWithSearchAndFilter();
+                var result = await sp.ExecuteSp(dto);
+                return APIResponseCreator.GetResponse(ResponseCode.SUCCESS_CODE, "Success", result, System.Net.HttpStatusCode.OK);
+            }
+            catch (Exception ex)
+            {
+                return APIResponseCreator.GetResponse(ResponseCode.FAILED_CODE, ex.ToString(), null, System.Net.HttpStatusCode.OK);
+            }
+        }
+
     }
 }
+
+
+
+
+
+

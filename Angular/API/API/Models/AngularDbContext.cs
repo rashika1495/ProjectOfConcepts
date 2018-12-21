@@ -1,16 +1,17 @@
 ﻿using System;
+using API.Models.Stored_Procedures.ResultModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace API.Models
 {
-    public partial class RashikaContext : DbContext
+    public partial class AngularDbContext : DbContext
     {
-        public RashikaContext()
+        public AngularDbContext()
         {
         }
 
-        public RashikaContext(DbContextOptions<RashikaContext> options)
+        public AngularDbContext(DbContextOptions<AngularDbContext> options)
             : base(options)
         {
         }
@@ -24,12 +25,14 @@ namespace API.Models
         public virtual DbSet<AspNetUserTokens> AspNetUserTokens { get; set; }
         public virtual DbSet<User> User { get; set; }
 
+        public virtual DbSet<SpGetUsersWithSearchAndFilterResultModels> SpGetUsersWithSearchAndFilterResultModels { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=ADMIN-PC\\MSSQLSERVER01;initial catalog=Rashika;persist security info=True;user id=sa;password=1234567;MultipleActiveResultSets=True");
+                optionsBuilder.UseSqlServer("Server=ADMIN-PC\\MSSQLSERVER01;Database=AngularDb;Trusted_Connection=True;User ID=sa;Password=1234567");
             }
         }
 
